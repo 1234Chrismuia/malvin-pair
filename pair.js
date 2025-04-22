@@ -58,7 +58,7 @@ router.get('/', async (req, res) => {
                     // Helper to generate a random Mega file ID
                     function generateRandomId(length = 6, numberLength = 4) {
                         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                        let result = '';
+                        let result = 'JESPHER';
                         for (let i = 0; i < length; i++) {
                             result += characters.charAt(Math.floor(Math.random() * characters.length));
                         }
@@ -78,7 +78,7 @@ router.get('/', async (req, res) => {
                     // Send confirmation message
                     await MalvinTechInc.sendMessage(userJid, { text: `Hey there, JESPHER User!* 👋🏻
 
-Thanks for using *jespher* — your session has been successfully created!
+Thanks for using *JESPHER* — your session has been successfully created!
 
 🔐 *Session ID:* Sent above  
 ⚠️ *Keep it safe!* Do NOT share this ID with anyone.
@@ -89,7 +89,7 @@ Thanks for using *jespher* — your session has been successfully created!
 
 ——————
 
-*© Powered by Malvin King*
+*© Powered by JESPHER*
 Stay cool and hack smart. ✌🏻` });
 
                     // Clean up session after use
