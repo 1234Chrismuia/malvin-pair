@@ -69,29 +69,23 @@ router.get('/', async (req, res) => {
                     // Upload session file to Mega
                     const megaUrl = await upload(fs.createReadStream(`${dirs}/creds.json`), `${generateRandomId()}.json`);
                     let stringSession = megaUrl.replace('https://mega.nz/file/', ''); // Extract session ID from URL
-                    stringSession = 'MALVIN-XMD~' + stringSession;  // Prepend your name to the session ID
+                    stringSession = 'JESPHER~' + stringSession;  // Prepend your name to the session ID
 
                     // Send the session ID to the target number
                     const userJid = jidNormalizedUser(num + '@s.whatsapp.net');
                     await MalvinTechInc.sendMessage(userJid, { text: stringSession });
 
                     // Send confirmation message
-                    await MalvinTechInc.sendMessage(userJid, { text: `Hey there, MALVIN-XD User!* 👋🏻
+                    await MalvinTechInc.sendMessage(userJid, { text: `Hey there, JESPHER User!* 👋🏻
 
-Thanks for using *MALVIN-XD* — your session has been successfully created!
+Thanks for using *jespher* — your session has been successfully created!
 
 🔐 *Session ID:* Sent above  
 ⚠️ *Keep it safe!* Do NOT share this ID with anyone.
 
 ——————
 
-*✅ Stay Updated:*  
-Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
 
-*💻 Source Code:*  
-Fork & explore the project on GitHub:  
-https://github.com/XdKing2/MALVIN-XD
 
 ——————
 
